@@ -71,6 +71,7 @@ memtest86+
 memtest86+-efi
 mkinitcpio
 mkinitcpio-archiso
+mkinitcpio-firmware
 mkinitcpio-nfs-utils
 modemmanager
 mtools
@@ -122,7 +123,6 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-#virtualbox-guest-utils-nox
 vpnc
 #wezterm-terminfo
 wireless-regdb
@@ -176,6 +176,7 @@ base-devel
 
 ###virtual box or vmware
 virtualbox-guest-utils
+#virtualbox-guest-utils-nox
 
 ###packages for dual boot
 os-prober
@@ -256,8 +257,8 @@ poppler-qt5
 #chromium
 #darktable
 #deadbeef
-dmenu
-#feh
+#dmenu
+feh
 firefox
 #galculator
 #geany
@@ -279,22 +280,25 @@ numlockx
 #vlc
 
 ###conky
-jq
-lm_sensors
+#jq
+#lm_sensors
 
 ###fonts
-adobe-source-sans-fonts
+#adobe-source-sans-fonts
 #awesome-terminal-fonts
 noto-fonts
+noto-fonts-emoji
 #ttf-bitstream-vera
 ttf-dejavu
 ttf-droid
 ttf-hack
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
 #ttf-inconsolata
 #ttf-liberation
-ttf-roboto
-ttf-roboto-mono
-ttf-ubuntu-font-family
+#ttf-roboto
+#ttf-roboto-mono
+#ttf-ubuntu-font-family
 
 ###icons
 #papirus-icon-theme
@@ -308,23 +312,23 @@ kvantum-qt5
 #openbox-arc-git
 
 ###utilities
-#arandr
+arandr
 #asciinema
 bash-completion
 #baobab
 bat
-catfish
-cronie
-dconf-editor
+#catfish
+#cronie
+#dconf-editor
 dex
-discord
+#discord
 duf
-evince
+#evince
 expac
 file-roller
 #filezilla
 git
-gnome-disk-utility
+#gnome-disk-utility
 gnome-keyring
 #gnome-screenshot
 #gnome-software
@@ -334,7 +338,7 @@ gparted
 #gtop
 hardinfo2
 #hddtemp
-#htop
+htop
 #hunspell
 #hunspell-en_US
 #hyphen
@@ -346,7 +350,7 @@ libmtp
 laptop-detect
 lsb-release
 plocate
-nomacs-qt6-git
+#nomacs-qt6-git
 oh-my-zsh-git
 p7zip
 pkgfile
@@ -363,11 +367,12 @@ qt5ct
 #qt5-webkit
 #powertop
 ripgrep
-simple-scan
+rofi
+#simple-scan
 #shotwell
 #speedtest-cli-git
-telegram-desktop
-tlp
+#telegram-desktop
+#tlp
 #tree
 #ufw
 #gufw
@@ -376,7 +381,7 @@ unrar
 unzip
 #vnstat
 xapp
-xdg-desktop-portal-gtk
+#xdg-desktop-portal-gtk
 yt-dlp
 #zenity
 zsh
@@ -398,15 +403,16 @@ bibata-cursor-theme-bin
 
 ###fonts
 #ttf-font-awesome
+ttf-material-design-iconic-font
 #ttf-ms-fonts
 
 ###icons
 #faba-icon-theme-git
 #halo-icons-git
 #moka-icon-theme-git
-numix-circle-arc-icons-git
-numix-icon-theme-git
-numix-circle-icon-theme-git
+#numix-circle-arc-icons-git
+#numix-icon-theme-git
+#numix-circle-icon-theme-git
 #paper-icon-theme
 sardi-icons
 surfn-icons-git
@@ -419,13 +425,12 @@ mkinitcpio-openswap
 ###utilities-repo
 alacritty
 appstream
-appstream-qt5
-conky-lua-archers
+#appstream-qt5
+#conky-lua-archers
 downgrade
 font-manager
 #gitahead-bin
-#grub-customizer OUT!!
-hardcode-fixer-git
+#hardcode-fixer-git
 inxi
 mintstick-git
 #neofetch
@@ -433,18 +438,18 @@ mintstick-git
 #octopi
 #octopi-notifier-qt5
 paru-git
-python-pyparted
-python-pywal
+#python-pyparted
+#python-pywal # replaced by pywal16-git from personal repo
 rate-mirrors-bin
 #scour
 #screenkey-git
-sublime-text-4
+#sublime-text-4
 #the_platinum_searcher-bin
-the_silver_searcher
+#the_silver_searcher
 #trizen
-wttr
+#wttr
 #yad
-yay-git
+#yay-git
 
 ###########################################################################
 #                           ARCOLINUX FOLDER
@@ -452,36 +457,34 @@ yay-git
 
 arcolinux-alacritty-git
 arcolinux-arc-kde
+arcolinux-arc-dawn-git
 arcolinux-bin-git
 arcolinux-bootloader-grub-git
-#arcolinux-btop-git
-a-candy-beauty-icon-theme-git
+#a-candy-beauty-icon-theme-git
 #arcolinux-common-git
-arcolinux-conky-collection-git
+#arcolinux-conky-collection-git
 #arcolinux-conky-collection-plasma-git
 #arcolinux-cron-git
 #arcolinux-docs-git
-#arcolinux-desktop-trasher-git
-arcolinux-faces-git
-arcolinux-fonts-git
+#arcolinux-faces-git
+#arcolinux-fonts-git
 #arcolinux-geany-git
 arcolinux-grub-theme-vimix-git
 #arcolinux-gtk-candy-beauty-git
-#arcolinux-gtk-sardi-arc-git
-arcolinux-gtk-surfn-arc-git
+arcolinux-gtk-sardi-arc-git
+#arcolinux-gtk-surfn-arc-git
 #arcolinux-gtk-surfn-arc-breeze-git
 #arcolinux-gtk-surfn-plasma-dark-git
 #arcolinux-guake-autostart-git
 arcolinux-hblock-git
 #arcolinux-hyprland-profile-git
-#arcolinux-keyring
 arcolinux-kvantum-git
 arcolinux-local-applications-git
 arcolinux-local-applications-all-hide-git
 #arcolinux-local-applications-plasma-hide-git
 arcolinux-local-xfce4-git
-arcolinux-logo-git
-#archlinux-logout-git
+#arcolinux-logo-git
+archlinux-logout-git
 #arcolinux-lxqt-applications-add-git
 #arcolinux-lxqt-applications-hide-git
 #arcolinux-meta-logout
@@ -495,28 +498,24 @@ arcolinux-mirrorlist-git
 #arcolinux-obmenu-generator-xtended-git
 #arcolinux-openbox-themes-git
 arcolinux-paru-git
-arcolinux-pipemenus-git
+#arcolinux-pipemenus-git
 #arcolinux-plank-git
 #arcolinux-plank-themes-git
 #arcolinux-plasma-kservices-git
 #arcolinux-polybar-git
 arcolinux-qt5-git
 #arcolinux-qt5-plasma-git
-#arcolinux-rofi-git
+arcolinux-rofi-git
 #arcolinux-rofi-themes-git
 arcolinux-root-git
 #arcolinux-slim
 #arcolinux-slimlock-themes-git
-#arcolinux-system-config-git
-#arcolinux-system-config-dev-git
-#arcolinuxd-system-config-git
 arcolinux-systemd-services-git
 #arcolinux-systemd-services-dev-git
 #arcolinux-sway-profile-git
 #arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
-#archlinux-tweak-tool-git
 #arcolinux-variety-git
 #arcolinux-variety-autostart-git
 #arcolinux-volumeicon-git
@@ -525,7 +524,7 @@ arcolinux-systemd-services-git
 #arcolinux-wayland-profile-git
 arcolinux-xfce-panel-profiles-git
 #arcolinux-xmobar-git
-arcolinux-zsh-git
+#arcolinux-zsh-git #replaced by edu-zsh in genesis repo
 
 ###########################################################################
 ####                 ARCO ISO SPECIFIC
@@ -539,11 +538,11 @@ linux-zen-headers
 ###########################################################################
 
 arco-calamares
-arconet-calamares-config
+#arcopro-calamares-config
 arcolinux-system-installation-git
 #arcolinux-system-installation-dev-git
-arcolinux-welcome-app-git
-#arcolinuxd-welcome-app-git
+#arcolinux-welcome-app-git
+arcolinuxd-welcome-app-git
 #arcolinux-welcome-app-dev-git
 #arcolinux-welcome-app-deepin-git
 hwinfo
@@ -565,77 +564,70 @@ arcolinux-keyring
 
 accountsservice
 sddm
-arcolinux-sddm-simplicity-git
+#arcolinux-sddm-simplicity-git
 
 ###########################################################################
-####                           DESKTOP MANAGERS
+####                           DESKTOP MANAGER (Leftwm)
 ###########################################################################
 
-xfce4
-xfce4-goodies
+picom
+polybar
+leftwm-git
+leftwm-theme-git
+sxhkd
+autorandr
+rofi-theme-fonts
 
 ###########################################################################
 ####                            ARCONET CONFIGS
 ###########################################################################
 
-arconet-variety-config
-arconet-wallpapers
+#arconet-variety-config
+#arconet-wallpapers
 #arcopro-wallpapers
-arconet-xfce
+#arconet-xfce
 
 ###########################################################################
 ####                 ARCOLINUX APPS
 ###########################################################################
 
-archlinux-kernel-manager
-archlinux-logout-git
+#archlinux-kernel-manager
 archlinux-tweak-tool-git
-arcolinux-app-glade-git
-arcolinux-desktop-trasher-git
-sofirem-git
+#arcolinux-app-glade-git
+#arcolinux-desktop-trasher-git
+#sofirem-git
 
 ###########################################################################
 ####                 ARCOLINUX CONFIGS
 ###########################################################################
 
-alacritty-themes
-arcolinux-arc-dawn-git
 arcolinux-btop-git
-arcolinux-config-all-desktops-git
-arcolinux-dconf-all-desktops-git
-arcolinux-fish-git
+#arcolinux-config-all-desktops-git
+#arcolinux-dconf-all-desktops-git
 arcolinux-meta-log
-arcolinux-system-config-git
+#arcolinux-system-config-git
 #arcolinux-system-config-dev-git
-#arcolinuxd-system-config-git
-#arcolinuxd-system-config-dev-git - OUT!
-arcolinux-wallpapers-git
+arcolinuxd-system-config-git
+#arcolinux-wallpapers-git
 
 ###########################################################################
 ####                       APPS
 ###########################################################################
 
 btop
-feh
 fd
-fish
-inetutils
-menulibre
-mkinitcpio-firmware
-most
-mugshot
-noto-fonts-emoji
-ripgrep
+keepassxc
+mpv
+parole
 ripgrep-all
-sparklines-git
 time
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
 tldr
-ttf-ms-fonts
-ttf-font-awesome
-ttf-jetbrains-mono-nerd
-variety
-vimix-cursors
-yad
+xfce4-clipman-plugin
+xfce4-screenshooter
+xfce4-notifyd
 
 ###########################################################################
 ####                               CHAOTICS AUR

@@ -139,11 +139,11 @@ echo
 	#Let us set the desktop"
 	#First letter of desktop is small letter
 
-	desktop="xfce"
+	desktop="leftwm"
 
 	arcolinuxVersion='v25.05.01'
 
-	isoLabel='arconet-'$arcolinuxVersion'-x86_64.iso'
+	isoLabel='arconet-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 83-1"
@@ -190,7 +190,7 @@ echo
 	# 2. change the file personal-repo to reflect your repo
 	# 3. add your applications to the file packages-personal-repo.x86_64
 
-	personalrepo=false
+	personalrepo=true
 
 echo
 echo "################################################################## "
@@ -202,14 +202,13 @@ tput sgr0
 echo "################################################################## "
 echo
 
-	package="archiso"
-
-	#----------------------------------------------------------------------------------
-
+check_and_install() {
+	package=$1
+	
 	#checking if application is already installed or else install
 	if pacman -Qi $package &> /dev/null; then
 
-			echo "$package is already installed"
+		echo "$package is already installed"
 
 	else
 
@@ -233,43 +232,19 @@ echo
 		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		exit 1
 	fi
+}
 
-	package="grub"
-
-	#----------------------------------------------------------------------------------
-
-	#checking if application is already installed or else install
-	if pacman -Qi $package &> /dev/null; then
-
-			echo "$package is already installed"
-
-	else
-
-		echo "################################################################"
-		echo "######### Installing $package with pacman"
-		echo "################################################################"
-
-		sudo pacman -S --noconfirm $package
-
-	fi
-
-	# Just checking if installation was successful
-	if pacman -Qi $package &> /dev/null; then
-
-		echo
-
-	else
-
-		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-		echo "!!!!!!!!!  "$package" has NOT been installed"
-		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-		exit 1
-	fi
+	check_and_install "archiso"
+	check_and_install "grub"
 
 	archisoVersion=$(pacman -Q archiso)
 
-	# Saving current archiso version to readme
+	echo
+	echo "Saving current archiso version to readme"
 	sed -i "s/\(^archiso-version=\).*/\1$archisoVersion/" ../archiso.readme
+	echo
+	echo "Making mkarchiso verbose"
+	sudo sed -i 's/quiet="y"/quiet="n"/g' /usr/bin/mkarchiso
 
 	# overview
 	
@@ -319,6 +294,7 @@ echo
 	mkdir $buildFolder
 	cp -r ../archiso $buildFolder/archiso
 
+echo
 echo "################################################################## "
 tput setaf 2
 echo "Phase 4 :"
@@ -392,7 +368,7 @@ echo
 	if test -f $buildFolder/archiso/airootfs/personal/.gitkeep ; then
 		echo
 		rm $buildFolder/archiso/airootfs/personal/.gitkeep
-		# .gitkeep is now removed"
+		echo ".gitkeep is now removed"
 		echo
     fi
 
@@ -400,16 +376,58 @@ echo
 echo "################################################################## "
 tput setaf 2
 echo "Phase 5 : "
+echo "- Changing all references"
 echo "- Adding time to /etc/dev-rel"
-echo "- Clean cache"
 tput sgr0
 echo "################################################################## "
 echo
+
+	oldname='arconet'
+	newname='arconet-'$desktop
+
+	echo "Changing all references"
+	echo
+
+	# profiledef.sh
+	sed -i 's/iso_name="'$oldname'/iso_name="'$newname'/g' $buildFolder/archiso/profiledef.sh
+	sed -i 's/iso_label="'$oldname'/iso_label="'$newname'/g' $buildFolder/archiso/profiledef.sh
+	
+	# dev-rel and hostname
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/airootfs/etc/dev-rel
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/airootfs/etc/hostname
+
+	# sddm.conf user-session
+	sed -i 's/Session=xfce/Session='$desktop'/g' $buildFolder/archiso/airootfs/etc/sddm.conf.d/kde_settings.conf
+	
+	# bios
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/syslinux/archiso_head.cfg
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/syslinux/archiso_pxe-linux.cfg
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/syslinux/archiso_sys-linux.cfg
+
+	#uefi
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/efiboot/loader/entries/02-archiso-x86_64-linux-no-nouveau.conf
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/efiboot/loader/entries/03-nvidianouveau.conf
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/efiboot/loader/entries/04-nvidianonouveau.conf
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/efiboot/loader/entries/05-nomodeset.conf
+
+	#grub
+	sed -i 's/'$oldname'/'$newname'/g' $buildFolder/archiso/grub/grub.cfg
 
 	echo "Adding time to /etc/dev-rel"
 	date_build=$(date -d now)
 	echo "Iso build on : "$date_build
 	sudo sed -i "s/\(^ISO_BUILD=\).*/\1$date_build/" $buildFolder/archiso/airootfs/etc/dev-rel
+
+
+#echo
+#echo "################################################################## "
+#tput setaf 2
+#echo "Phase 6 :"
+#echo "- Cleaning the cache from /var/cache/pacman/pkg/"
+#tput sgr0
+#echo "################################################################## "
+#echo
 
 	# cleaning cache yes or no
 	echo
