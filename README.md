@@ -2,7 +2,9 @@
  <img src="https://github.com/erikdubois/arcolinux-nemesis/blob/master/Personal/settings/arcolinuxws.png">
 </p>
 
-# arconet iso
+# Arconet-LeftWM ISO
+
+custom ArcoLinux ISO
 
 # Follow build and installation tutorials on
 
