@@ -278,6 +278,7 @@ numlockx
 #simplescreenrecorder
 #variety
 #vlc
+gnome-logs
 
 ###conky
 #jq
@@ -396,9 +397,10 @@ zsh-syntax-highlighting
 #vivaldi
 #vivaldi-ffmpeg-codecs
 #vivaldi-widevine
+zen-browser-bin
 
 ###cursors
-bibata-cursor-theme-bin
+bibata-cursor-theme
 #breeze
 
 ###fonts
@@ -415,7 +417,7 @@ ttf-material-design-iconic-font
 #numix-circle-icon-theme-git
 #paper-icon-theme
 sardi-icons
-surfn-icons-git
+#surfn-icons-git
 #surfn-arc-breeze-icons-git
 #zafiro-icon-theme
 
@@ -434,13 +436,14 @@ font-manager
 inxi
 mintstick-git
 #neofetch
+fastfetch
 #numix-gtk-theme-git
 #octopi
 #octopi-notifier-qt5
 paru-git
 #python-pyparted
 #python-pywal # replaced by pywal16-git from personal repo
-rate-mirrors-bin
+rate-mirrors
 #scour
 #screenkey-git
 #sublime-text-4
@@ -456,9 +459,9 @@ rate-mirrors-bin
 ###########################################################################
 
 arcolinux-alacritty-git
-arcolinux-arc-kde
-arcolinux-arc-dawn-git
-arcolinux-bin-git
+# arcolinux-arc-kde
+# arcolinux-arc-dawn-git
+# arcolinux-bin-git
 arcolinux-bootloader-grub-git
 #a-candy-beauty-icon-theme-git
 #arcolinux-common-git
@@ -469,7 +472,7 @@ arcolinux-bootloader-grub-git
 #arcolinux-faces-git
 #arcolinux-fonts-git
 #arcolinux-geany-git
-arcolinux-grub-theme-vimix-git
+arcolinux-grub-theme-vimix-git # do we really need this?
 #arcolinux-gtk-candy-beauty-git
 arcolinux-gtk-sardi-arc-git
 #arcolinux-gtk-surfn-arc-git
@@ -479,10 +482,10 @@ arcolinux-gtk-sardi-arc-git
 arcolinux-hblock-git
 #arcolinux-hyprland-profile-git
 arcolinux-kvantum-git
-arcolinux-local-applications-git
-arcolinux-local-applications-all-hide-git
+#arcolinux-local-applications-git
+#arcolinux-local-applications-all-hide-git
 #arcolinux-local-applications-plasma-hide-git
-arcolinux-local-xfce4-git
+#arcolinux-local-xfce4-git
 #arcolinux-logo-git
 archlinux-logout-git
 #arcolinux-lxqt-applications-add-git
@@ -510,7 +513,7 @@ arcolinux-rofi-git
 arcolinux-root-git
 #arcolinux-slim
 #arcolinux-slimlock-themes-git
-arcolinux-systemd-services-git
+#arcolinux-systemd-services-git #doesn't actually give anything but a license
 #arcolinux-systemd-services-dev-git
 #arcolinux-sway-profile-git
 #arcolinux-termite-themes-git
@@ -522,7 +525,7 @@ arcolinux-systemd-services-git
 #arcolinux-wallpapers-dual-git
 #arcolinux-wayfire-profile-git
 #arcolinux-wayland-profile-git
-arcolinux-xfce-panel-profiles-git
+#arcolinux-xfce-panel-profiles-git
 #arcolinux-xmobar-git
 #arcolinux-zsh-git #replaced by edu-zsh in genesis repo
 
@@ -557,6 +560,7 @@ adobe-source-han-sans-cn-fonts
 ###########################################################################
 
 arcolinux-keyring
+chaotic-keyring
 
 ###########################################################################
 ####                           DISPLAY MANAGERS
@@ -576,7 +580,6 @@ leftwm-git
 leftwm-theme-git
 sxhkd
 autorandr
-rofi-theme-fonts
 
 ###########################################################################
 ####                            ARCONET CONFIGS
@@ -604,7 +607,7 @@ archlinux-tweak-tool-git
 arcolinux-btop-git
 #arcolinux-config-all-desktops-git
 #arcolinux-dconf-all-desktops-git
-arcolinux-meta-log
+#arcolinux-meta-log
 #arcolinux-system-config-git
 #arcolinux-system-config-dev-git
 arcolinuxd-system-config-git
