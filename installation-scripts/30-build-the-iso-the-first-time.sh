@@ -141,7 +141,7 @@ echo
 
 	desktop="leftwm"
 
-	arcolinuxVersion='v25.05.01'
+	arcolinuxVersion='v25.04.13'
 
 	isoLabel='arconet-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
