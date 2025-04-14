@@ -405,7 +405,7 @@ bibata-cursor-theme
 
 ###fonts
 #ttf-font-awesome
-ttf-material-design-iconic-font
+ttf-material-design-icons-extended
 #ttf-ms-fonts
 
 ###icons
@@ -434,7 +434,7 @@ font-manager
 #gitahead-bin
 #hardcode-fixer-git
 inxi
-mintstick-git
+mintstick
 #neofetch
 fastfetch
 #numix-gtk-theme-git
@@ -472,7 +472,7 @@ arcolinux-bootloader-grub-git
 #arcolinux-faces-git
 #arcolinux-fonts-git
 #arcolinux-geany-git
-arcolinux-grub-theme-vimix-git # do we really need this?
+arcolinux-grub-theme-vimix-git
 #arcolinux-gtk-candy-beauty-git
 arcolinux-gtk-sardi-arc-git
 #arcolinux-gtk-surfn-arc-git
@@ -491,7 +491,6 @@ archlinux-logout-git
 #arcolinux-lxqt-applications-add-git
 #arcolinux-lxqt-applications-hide-git
 #arcolinux-meta-logout
-arcolinux-mirrorlist-git
 #arcolinux-neofetch-git
 #arcolinux-nitrogen-git
 #arcolinux-oblogout
@@ -561,6 +560,7 @@ adobe-source-han-sans-cn-fonts
 ####                         KEYRINGS
 ###########################################################################
 
+arcolinux-mirrorlist-git
 arcolinux-keyring
 chaotic-keyring
 
@@ -640,3 +640,18 @@ xfce4-notifyd
 
 #flat-remix
 #colloid-cursors-git
+
+###########################################################################
+####                               Gensis
+###########################################################################
+
+# edu-BloodMoon-gtk-theme-git
+edu-sddm-BloodMoon-sugar-candy-git
+pywal16-git
+edu-leftwm-git
+edu-backgrounds-git
+#edu-st-git
+edu-zsh-git
+edu-nvim-meta
+edu-helix-meta
+edu-calamares-config-git
