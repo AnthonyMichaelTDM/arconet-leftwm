@@ -549,7 +549,7 @@ arco-calamares-git
 arcolinux-system-installation-git
 #arcolinux-system-installation-dev-git
 #arcolinux-welcome-app-git
-#arcolinuxd-welcome-app-git
+arcolinuxd-welcome-app-git
 #arcolinux-welcome-app-dev-git
 #arcolinux-welcome-app-deepin-git
 hwinfo
@@ -565,6 +565,7 @@ adobe-source-han-sans-cn-fonts
 
 #arcolinux-mirrorlist-git
 #arcolinux-keyring
+chaotic-mirrorlist
 chaotic-keyring
 
 ###########################################################################
