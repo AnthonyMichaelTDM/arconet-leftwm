@@ -540,12 +540,14 @@ linux-zen-headers
 ####                               CALAMARES
 ###########################################################################
 
-arco-calamares
+### TODO: Migrate to archinstaller
+
+arco-calamares-git
 #arcopro-calamares-config
 arcolinux-system-installation-git
 #arcolinux-system-installation-dev-git
 #arcolinux-welcome-app-git
-arcolinuxd-welcome-app-git
+#arcolinuxd-welcome-app-git
 #arcolinux-welcome-app-dev-git
 #arcolinux-welcome-app-deepin-git
 hwinfo
