@@ -560,8 +560,8 @@ adobe-source-han-sans-cn-fonts
 ####                         KEYRINGS
 ###########################################################################
 
-arcolinux-mirrorlist-git
-arcolinux-keyring
+#arcolinux-mirrorlist-git
+#arcolinux-keyring
 chaotic-keyring
 
 ###########################################################################
@@ -597,7 +597,7 @@ autorandr
 ###########################################################################
 
 #archlinux-kernel-manager
-archlinux-tweak-tool-git
+#archlinux-tweak-tool-git
 #arcolinux-app-glade-git
 #arcolinux-desktop-trasher-git
 #sofirem-git
