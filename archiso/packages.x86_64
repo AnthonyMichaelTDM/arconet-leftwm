@@ -316,6 +316,7 @@ kvantum-qt5
 
 ###utilities
 arandr
+arch-wiki-docs
 #asciinema
 bash
 bash-completion
@@ -375,6 +376,7 @@ rofi
 #simple-scan
 #shotwell
 #speedtest-cli-git
+tealdeer
 #telegram-desktop
 #tlp
 #tree
@@ -384,6 +386,7 @@ unace
 unrar
 unzip
 #vnstat
+wikiman
 xapp
 #xdg-desktop-portal-gtk
 yt-dlp
