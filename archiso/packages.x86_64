@@ -166,7 +166,7 @@ xf86-video-vmware
 mesa
 
 ###hardware video support
-nvidia-dkms
+nvidia-open-dkms
 nvidia-utils
 nvidia-settings
 #mesa-utils
